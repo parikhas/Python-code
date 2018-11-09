@@ -1,0 +1,37 @@
+Part1
+This program should check the following
+sequence and test whether it has the following restriction cut sites (globally). If the
+restriction sites are present print out the regex, the pattern that matched the regex, and
+the position where the cut begins
+1). CACNNN/GTG (so CACNNN or CACGTG) where N represents A,C,T, or G
+2). GCCWGG, where W represents A or T
+$dna1 =
+'AACAGCACGGCAACGCTGTGCCTTGGGCACCATGCAGTACCAAACGGAACGATAGTGAAAACAATCACGA
+ATGACCAAATTGAAGTTACTAATGCTACTGAGCTGGTTCAGAGTTCCTCAACAGGTGAAATATGCGACAG
+TCCTCATCAGATCCTTGATGGAGAAAACTGCACACTAATAGATGCTCTATTGGGAGACCCTCAGTGTGAT
+GGCTTCCAAAATAAGAAATGGGACCTTTTTGTTGAACGCAGCAAAGCCTACAGCAACTGTTACCCTTATG
+ATGTGCCGGATTATGCCTCCCTTAGGTCACTAGTTGCCTCATCCGGCACACTGGAATTTAACAATGAAAG
+CTTCAATTGGACTGGAGTCACTCAAAATGGAATCAGCTCTGCTTGCAAAAGGAGATCTAATAACAGTTTC
+TTTAGTAGATTGAATTGGTTGACCCACTTAAAATTCAAATACCCAGCATTGAACGTGACTATGCCAAACA
+ATGAAAAATTTGACAAATTGTACATTTGGGGGGTTCACCACCCGGGTACGGACAATGACCAAATCTTCCT
+GTATGCTCAAGCATCAGGAAGAATCACAGTCTCTACCAAAAGAAGCCAACAGACTGTAATCCCGAATATC
+GGATCTAGACCCAGAGTAAGGAATATCCCCAGCAGAATAAGCATCTATTGGACAATAGTAAAACCGGGAG
+ACATACTTTTGATTAACAGCACAGGGAATTTAATTGCTCCTAGGGGTTACTTCAAAATACGAAGTGGGAA
+AAGCTCAATAATGAGATCAGATGCACCCATTGGCAAATGCAATTCTGAATGCATCACTCCAAATGGAAGC
+ATTCCCAATGACAAACCATTTCAAAATGTAAACAGGATCACATATGGGGCCTGGCCCAGATATGTTAAGC
+AAAACACTCTGAAATTGGCAACAGGGATGCGAAATGTACCAGAGAAACAAACTAGAGGCATATTTGGCGC
+AATCGCGGGTTTCATAGAAAATGGTTGGGAAGGAATGGTGGATGGTTGGTACGGTTT
+
+Part2
+The program takes in a file in SwissProt format, which is a file format quite common in bioinformatics (it comes from the Swiss Institute
+of Bioinformatics) and converts it to fasta format. The fasta format has an annotation
+line that begins with '>', followed by one or my annotation fields separated by '|'.The
+sequence starts on the next line after the annotation line. Your program should parse
+the specified fields out of the SwissProt file, build a fasta annotation line with them, then
+append the sequence. You must parse the fields using a regular expressions.
+
+Part3
+Your next script should open test.fasta and scan the fasta file for hydrophobic motifs, which are located by the
+occurrence of a stretch of 8 or more amino acids from the following set of amino
+acids: VILMFWCA. The fasta file has a header line and then on the next line the entire
+sequence can be found. So each sequence entry takes up exactly two lines.
